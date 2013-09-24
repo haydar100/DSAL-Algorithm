@@ -1,5 +1,4 @@
 
-
 public class binarySearch2DSAL<T> {
 	   int binarySearch2( Comparable<T>[ ] a, int low, int high,T x )
 	    {
@@ -11,12 +10,15 @@ public class binarySearch2DSAL<T> {
 	            mid = ( low + high ) / 2;
 	            System.out.println("mid: " + mid);
 
-	            if( a[mid].compareTo( x ) < 0 )
+	            if( a[mid].compareTo( x ) < 0 ) {
 	            	  return binarySearch2(a, mid + 1, high, x);
-	            else if( a[mid].compareTo( x ) > 0 )
+	            }
+	            else if( a[mid].compareTo( x ) > 0 ) {
 	            	  return binarySearch2(a, mid - 1, high, x);
-	            else
+	            }
+	            else {
 	                return mid;
+	            }
 	        }
 	        return -1;
 
